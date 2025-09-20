@@ -1,0 +1,98 @@
+/* src/pages/ProfilePage/ProfilePage.css */
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+  background-color: #0a1f44;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.profile-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #4da8ff;
+}
+
+.profile-container p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.file-list-section {
+  background-color: #132f62;
+  padding: 30px;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.file-list-section h2 {
+  font-size: 1.8rem;
+  color: #3b82f6;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.file-list-section ul {
+  list-style: none;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.file-list-section li {
+  background-color: #1a3a60;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #4da8ff;
+  font-size: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.file-list-section li:hover {
+  transform: translateX(5px);
+  background-color: #214d7c;
+}
+
+.file-list-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.file-list-section::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 4px;
+}
+
+.error-message {
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-container p:last-child {
+  text-align: center;
+  color: #aaa;
+}
+.file-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 0;
+}
+.delete-icon {
+  width: 16px;
+  height: 16px;
+}

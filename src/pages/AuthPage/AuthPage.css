@@ -1,0 +1,154 @@
+/* ===========================
+   Auth Container
+=========================== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120vh; /* Full screen */
+  padding: 40px 20px;
+  perspective: 1000px;
+  background: linear-gradient(135deg, rgba(21, 56, 255, 0.95), rgba(15, 20, 60, 0.95));
+  backdrop-filter: blur(8px); /* Dark blur effect */
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+}
+
+/* ===========================
+   Form Flipper
+=========================== */
+.form-flipper {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              min-height 0.5s ease; /* animate height */
+  min-height: 500px; /* default (login) */
+}
+
+.form-flipper.show-signup {
+  transform: rotateY(180deg);
+  min-height: 750px; /* enough space for signup */
+}
+
+/* ===========================
+   Form Wrapper
+=========================== */
+.form-wrapper {
+  position: absolute;
+  width: 100%;
+  height: auto; /* content defines height */
+  min-height: 100%;
+  backface-visibility: hidden;
+  background: rgba(26, 31, 61, 0.7);
+  padding: 30px 25px 20px; /* slightly reduced bottom padding */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+  color: #fff;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Front (Login Form) */
+.login-form {
+  transform: rotateY(0deg);
+}
+
+/* Back (Signup Form) */
+.signup-form {
+  transform: rotateY(180deg);
+}
+
+/* ===========================
+   Form Elements
+=========================== */
+.form-wrapper h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #d0d6ff;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background: rgba(10, 15, 44, 0.6);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4d6bff;
+  box-shadow: 0 0 8px rgba(77, 107, 255, 0.6);
+  outline: none;
+}
+.form-group select option {
+  background: rgba(10, 15, 44, 0.95);
+  color: #fff;
+  padding: 10px;
+}
+.form-wrapper .btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #212EA0;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-wrapper .btn:hover {
+  background-color: #3346d3;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Toggle + Error Message
+=========================== */
+.toggle-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #cfd8ff;
+}
+
+.toggle-text span {
+  color: #4d6bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-text span:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 14px;
+  margin-top: 5px;
+}

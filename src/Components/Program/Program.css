@@ -1,0 +1,57 @@
+.heading {
+  text-align: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px;
+  padding-top: 3%;
+}
+
+.program-container {
+  margin: 80px auto;
+  width: 86%;
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 20px; /* spacing between cards */
+  justify-content: space-between;
+}
+
+.program-card {
+  flex-basis: 23%; /* 4 cards per row */
+  position: relative;
+}
+
+.program-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;          
+  background: rgba(0, 15, 152, 0.85); /* solid bar only at bottom */
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 0 0 8px 8px; 
+  opacity: 0; /* hidden initially */
+  transition: opacity 0.3s ease;
+}
+
+.program-card:hover .caption {
+  opacity: 1; /* show bar on hover */
+}
+
+.caption img {
+  width: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.caption p {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
